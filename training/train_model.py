@@ -28,5 +28,5 @@ model = Sequential([
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
-model.save("digits_model.h5")  # Save Keras model
-joblib.dump(digits.target_names, "class_names.json")  # Save label mapping
+model.save("../model/digits_model.h5")  # Save Keras model
+joblib.dump(digits.target_names, "../model/class_names.json")  # Save label mapping
